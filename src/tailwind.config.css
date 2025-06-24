@@ -1,0 +1,58 @@
+/* Tailwind CSS v4 configuration */
+@import 'tailwindcss';
+
+/* Налаштування ручного перемикання темного режиму через клас dark */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Налаштування темного режиму для використання класу dark */
+@property --dark-mode {
+  syntax: '<custom-ident>';
+  inherits: true;
+  initial-value: selector;
+}
+
+/* Визначення утиліт, які використовуються в JavaScript */
+@utility bg-yellow-500 {
+  background-color: theme(colors.yellow.500);
+}
+
+@utility bg-gray-700 {
+  background-color: theme(colors.gray.700);
+}
+
+@utility -translate-x-2 {
+  --tw-translate-x: -0.5rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+@utility translate-x-full {
+  --tw-translate-x: 100%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+@theme {
+  /* Визначаємо, що темний режим використовує клас dark */
+  --dark-mode: selector;
+
+  /* Extending colors */
+  --color-tomato: tomato;
+
+  /* Extending font family */
+  --font-main: 'Roboto', 'sans-serif';
+
+  /* Extending font weight */
+  --font-medium: 500;
+
+  /* Налаштування тіней і кольорів для темного режиму */
+  --shadow-slate-400-30: rgb(148 163 184 / 0.3);
+  --shadow-slate-900-30: rgb(15 23 42 / 0.3);
+  --color-black-40: rgb(0 0 0 / 0.4);
+
+  /* Додаткові налаштування для градієнтів */
+  --color-red-800: rgb(153 27 27);
+  --color-blue-950: rgb(23 37 84);
+}
