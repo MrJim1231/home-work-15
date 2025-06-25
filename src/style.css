@@ -1,4 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import "./tailwind.config.css";
+
+.body {
+  @apply bg-white;
+}
+
+.page-container {
+  @apply container mx-auto px-4;
+}
 
 .header {
   @apply flex items-center justify-between gap-8 mb-10 border-b border-gray-200 dark:border-gray-700;
@@ -14,4 +23,24 @@
 
 .navbar__list {
   @apply flex items-center gap-8 text-gray-700;
+}
+
+.navbar__link {
+  @apply block px-2 py-1 relative uppercase transition duration-300 hover:text-indigo-700 dark:text-gray-300 dark:hover:text-white;
+}
+
+.navbar__link::after {
+  @apply content-[''] absolute bottom-0 left-1/2 h-0.5 w-0 bg-transparent transition-all duration-300 ease-in-out;
+}
+
+.navbar__link:hover::after {
+  @apply w-[calc(100%+8px)] left-[-4px] bg-indigo-700;
+}
+
+.trigger-button {
+  @apply md:hidden;
+}
+
+.trigger-button-svg {
+  @apply w-8 h-8 text-gray-700 dark:text-gray-300;
 }

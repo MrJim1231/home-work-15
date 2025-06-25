@@ -8,18 +8,27 @@
   <title>Vite App</title>
 </head>
 
-<body>
+<body class="body">
+  <div class="page-container">
+    <header class="header">
+      <a class="logo" href="#">Site Logo</a>
+      <nav class="navbar">
+        <ul class="navbar__list">
+          <li class="navbar__item"><a class="navbar__link" href="#">Home</a></li>
+          <li class="navbar__item"><a class="navbar__link" href="#">About</a></li>
+          <li class="navbar__item"><a class="navbar__link" href="#">Contact</a></li>
+          <li class="navbar__item"><a class="navbar__link" href="#">News</a></li>
+        </ul>
+      </nav>
 
-  <header class="header">
-    <a class="logo" href="#">Site Logo</a>
-    <nav class="navbar">
-      <ul class="navbar__list">
-        <li class="navbar__item"><a class="navbar__link" href="#">Home</a></li>
-        <li class="navbar__item"><a class="navbar__link" href="#">About</a></li>
-        <li class="navbar__item"><a class="navbar__link" href="#">Contact</a></li>
-        <li class="navbar__item"><a class="navbar__link" href="#">News</a></li>
-      </ul>
-  </header>
+      <button class="trigger-button">
+        <svg class="trigger-button-svg" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+    </header>
+  </div>
 
   <script type="module" src="/src/main.js"></script>
 </body>
