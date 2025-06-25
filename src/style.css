@@ -1,8 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-@import "./tailwind.config.css";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import './tailwind.config.css';
 
 .body {
   @apply bg-white dark:bg-gray-900;
+}
+
+.visually-hidden {
+  @apply absolute w-px h-px -m-px border-0 p-0 whitespace-nowrap overflow-hidden invisible;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
 }
 
 .page-container {
