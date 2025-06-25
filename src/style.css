@@ -10,24 +10,18 @@
 }
 
 .header {
-  @apply flex items-center justify-between gap-8 mb-10 border-b border-gray-200 px-3;
+  @apply flex items-center justify-between gap-8 mb-10 border-b border-gray-200 dark:border-gray-700 px-3;
 }
 
 .logo {
   @apply block py-8 text-2xl font-bold uppercase px-3;
-
-  /* Градиентный текст */
-  background: linear-gradient(
-    to right,
-    #34d399,
-    #facc15
-  ); /* emerald-400 → yellow-300 */
+  background: linear-gradient(to right, #34d399, #facc15);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .switch-button {
-  @apply w-20 h-10 flex items-center rounded-full bg-white shadow-md transition duration-300 focus:outline-none;
+  @apply w-20 h-10 flex items-center rounded-full bg-white dark:bg-gray-800 shadow-md transition duration-300 focus:outline-none;
 }
 
 .navbar {
@@ -35,12 +29,12 @@
 }
 
 .navbar__list {
-  @apply flex items-center gap-4 text-gray-700;
+  @apply flex items-center gap-4 text-gray-700 dark:text-gray-300;
 }
 
 .navbar__link {
   @apply relative inline-block w-28 text-center px-3 py-2 uppercase font-medium overflow-hidden 
-         transition-all duration-500 ease-in-out text-gray-700;
+         transition-all duration-500 ease-in-out text-gray-700 dark:text-gray-300;
 }
 
 .effect-fill::before {
@@ -62,7 +56,7 @@
 }
 
 .trigger__button-svg {
-  @apply w-8 h-8 text-gray-700;
+  @apply w-8 h-8 text-gray-700 dark:text-gray-300;
 }
 
 .breadcrumb {
@@ -70,15 +64,15 @@
 }
 
 .breadcrumb__link {
-  @apply text-gray-500 transition duration-300 hover:text-gray-900;
+  @apply text-gray-500 dark:text-gray-400 transition duration-300 hover:text-gray-900 dark:hover:text-white;
 }
 
 .breadcrumb__separator {
-  @apply text-gray-300;
+  @apply text-gray-300 dark:text-gray-500;
 }
 
 .hero {
-  @apply flex flex-col md:flex-row gap-4 mb-12 border-b border-gray-200 pb-10;
+  @apply flex flex-col md:flex-row gap-4 mb-12 border-b border-gray-200 dark:border-gray-700 pb-10;
 }
 
 .hero__article {
@@ -115,17 +109,13 @@
 
 .articles__title {
   @apply text-3xl font-bold mb-4 uppercase text-transparent;
-  background: linear-gradient(
-    to right,
-    #34d399,
-    #facc15
-  ); /* emerald-400 → yellow-300 */
+  background: linear-gradient(to right, #34d399, #facc15);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .articles__item {
-  @apply flex flex-col md:flex-row bg-white border border-gray-200 
+  @apply flex flex-col md:flex-row bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 
          rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:scale-[1.02];
 }
 
@@ -138,11 +128,11 @@
 }
 
 .articles__subtitle {
-  @apply text-xl font-semibold text-gray-800 transition-colors duration-300 hover:text-emerald-500;
+  @apply text-xl font-semibold text-gray-800 dark:text-gray-100 transition-colors duration-300 hover:text-emerald-500;
 }
 
 .articles__text {
-  @apply text-gray-600 mt-2;
+  @apply text-gray-600 dark:text-gray-400 mt-2;
 }
 
 .form-sidebar {
@@ -150,7 +140,7 @@
 }
 
 .form-box {
-  @apply bg-white border border-gray-200 rounded-xl p-6 shadow-md;
+  @apply bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-6 shadow-md;
 }
 
 .form-title {
@@ -161,12 +151,13 @@
 }
 
 .form-description {
-  @apply text-gray-700 mb-4;
+  @apply text-gray-700 dark:text-gray-300 mb-4;
 }
 
 .form-input {
-  @apply w-full mb-4 px-4 py-2 border border-gray-300 rounded-md 
-         focus:outline-none focus:ring-2 focus:ring-emerald-400;
+  @apply w-full mb-4 px-4 py-2 border border-gray-300 dark:border-gray-600 
+         bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 
+         rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-400;
 }
 
 .form-button {
@@ -184,18 +175,22 @@
 }
 
 .pagination__list {
-  @apply flex list-none border border-slate-300 rounded-md overflow-hidden;
+  @apply flex list-none border border-slate-300 dark:border-slate-600 rounded-md overflow-hidden;
 }
 
 .pagination__link {
-  @apply block px-3 py-2 text-slate-700 hover:text-slate-800 hover:bg-slate-200 border-l border-slate-300;
+  @apply block px-3 py-2 text-slate-700 dark:text-slate-300 
+         hover:text-slate-800 dark:hover:text-white 
+         hover:bg-slate-200 dark:hover:bg-slate-700 
+         border-l border-slate-300 dark:border-slate-600;
 }
 
 .pagination__list li:first-child .pagination__link {
   @apply border-l-0;
 }
+
 .footer {
-  @apply bg-slate-100 dark:bg-slate-900 text-slate-700 dark:text-slate-300 pt-12 pb-6 border-t border-gray-200 mt-12;
+  @apply bg-slate-100 dark:bg-slate-900 text-slate-700 dark:text-slate-300 pt-12 pb-6 border-t border-gray-200 dark:border-gray-700 mt-12;
 }
 
 .footer__container {
@@ -230,13 +225,13 @@
 }
 
 .footer__link {
-  @apply text-sm transition-colors duration-200 hover:text-emerald-400 hover:underline;
+  @apply text-sm transition-colors duration-200 hover:underline hover:text-emerald-400 dark:hover:text-yellow-300;
 }
 
 .footer__bottom {
-  @apply border-t border-gray-300 pt-4 text-center;
+  @apply border-t border-gray-300 dark:border-gray-700 pt-4 text-center;
 }
 
 .footer__copy {
-  @apply text-xs text-gray-500;
+  @apply text-xs text-gray-500 dark:text-gray-400;
 }
