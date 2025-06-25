@@ -142,7 +142,7 @@
 }
 
 .form-sidebar {
-  @apply w-full lg:w-1/3;
+  @apply w-full lg:w-1/3 self-start lg:mt-18;
 }
 
 .form-box {
