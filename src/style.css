@@ -5,7 +5,7 @@
   @apply bg-white;
 }
 
-.page-container {
+.page__container {
   @apply container mx-auto px-4;
 }
 
@@ -37,10 +37,22 @@
   @apply w-[calc(100%+8px)] left-[-4px] bg-indigo-700;
 }
 
-.trigger-button {
+.trigger__button {
   @apply md:hidden;
 }
 
-.trigger-button-svg {
+.trigger__button-svg {
   @apply w-8 h-8 text-gray-700 dark:text-gray-300;
+}
+
+.breadcrumb {
+  @apply flex items-center mb-8;
+}
+
+.breadcrumb__link {
+  @apply text-gray-500 transition duration-300 hover:text-gray-900 dark:hover:text-gray-100;
+}
+
+.breadcrumb__separator {
+  @apply text-gray-300 dark:text-gray-700;
 }
