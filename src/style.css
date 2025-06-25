@@ -74,7 +74,7 @@
 }
 
 .hero {
-  @apply flex flex-col md:flex-row gap-4 mb-12;
+  @apply flex flex-col md:flex-row gap-4 mb-12 border-b border-gray-200 pb-10;
 }
 
 .hero__article {
