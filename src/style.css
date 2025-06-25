@@ -2,7 +2,7 @@
 @import "./tailwind.config.css";
 
 .body {
-  @apply bg-white;
+  @apply bg-white dark:bg-gray-900;
 }
 
 .page-container {
@@ -24,6 +24,10 @@
   ); /* emerald-400 → yellow-300 */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.switch-button {
+  @apply w-20 h-10 flex items-center rounded-full bg-white shadow-md transition duration-300 focus:outline-none;
 }
 
 .navbar {
