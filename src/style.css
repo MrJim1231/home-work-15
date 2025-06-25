@@ -22,19 +22,26 @@
 }
 
 .navbar__list {
-  @apply flex items-center gap-8 text-gray-700;
+  @apply flex items-center gap-4 text-gray-700;
 }
 
 .navbar__link {
-  @apply block px-2 py-1 relative uppercase transition duration-300 hover:text-indigo-700 dark:text-gray-300 dark:hover:text-white;
+  @apply relative inline-block w-28 text-center px-3 py-2 uppercase font-medium overflow-hidden 
+         transition-all duration-500 ease-in-out text-gray-700 dark:text-gray-300;
 }
 
-.navbar__link::after {
-  @apply content-[''] absolute bottom-0 left-1/2 h-0.5 w-0 bg-transparent transition-all duration-300 ease-in-out;
+.effect-fill::before {
+  @apply content-[""] absolute bottom-0 left-0 w-0 h-full 
+         bg-gradient-to-r from-pink-500 to-purple-600 
+         transition-all duration-500 z-[-1];
 }
 
-.navbar__link:hover::after {
-  @apply w-[calc(100%+8px)] left-[-4px] bg-indigo-700;
+.effect-fill:hover::before {
+  @apply w-full;
+}
+
+.effect-fill:hover {
+  @apply text-white;
 }
 
 .trigger__button {
