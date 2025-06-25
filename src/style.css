@@ -56,3 +56,31 @@
 .breadcrumb__separator {
   @apply text-gray-300 dark:text-gray-700;
 }
+
+.hero {
+  @apply flex flex-col md:flex-row gap-4 mb-12;
+}
+
+.hero__article {
+  @apply h-64 md:h-80 lg:h-96 relative rounded-lg overflow-hidden;
+}
+
+.hero__link {
+  @apply absolute inset-0;
+}
+
+.hero__title {
+  @apply absolute bottom-0 left-0 z-10 p-4 text-2xl font-medium uppercase text-white transition-all duration-300 group-hover:bottom-10;
+}
+
+.hero__image {
+  @apply absolute left-0 top-0 w-full h-full object-cover transition duration-300 group-hover:scale-110;
+}
+
+.hero__overlay-primary {
+  @apply absolute left-0 top-0 w-full h-full bg-gradient-to-tr from-indigo-800 via-40% via-transparent to-100% to-amber-700 transition duration-300 group-hover:bg-black/70 group-hover:via-50%;
+}
+
+.hero__overlay-secondary {
+  @apply absolute left-0 top-0 w-full h-full bg-gradient-to-tr from-amber-700 via-60% via-transparent to-100% to-indigo-800 transition duration-300 group-hover:bg-black/70 group-hover:via-50%;
+}
