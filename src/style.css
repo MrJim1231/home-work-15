@@ -170,3 +170,23 @@
          font-medium rounded-md hover:from-emerald-500 hover:to-yellow-400 
          transition duration-300 uppercase;
 }
+
+.pagination-container {
+  @apply flex justify-center mt-8;
+}
+
+.pagination {
+  @apply text-sm;
+}
+
+.pagination__list {
+  @apply flex list-none border border-slate-300 rounded-md overflow-hidden;
+}
+
+.pagination__link {
+  @apply block px-3 py-2 text-slate-700 hover:text-slate-800 hover:bg-slate-200 border-l border-slate-300;
+}
+
+.pagination__list li:first-child .pagination__link {
+  @apply border-l-0;
+}
